@@ -335,7 +335,7 @@ a {
   font-family: var(--font-display);
   font-size: 1rem;
   color: #fff;
-  animation: marquee 1s linear infinite;
+  animation: marquee 6s linear infinite;
   width: max-content;
 }
 @keyframes marquee {
