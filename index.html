@@ -1,252 +1,354 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tienda PadelPoint Indonesia — Premium Padel Gear</title>
-<meta name="description" content="Tienda PadelPoint Indonesia — world's no.1 padel shop, official PadelPoint Spain franchise partner. Rackets, apparel, shoes & accessories. Jakarta & Bandung.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda PadelPoint Indonesia — Premium Padel Gear</title>
+    <meta
+      name="description"
+      content="Tienda PadelPoint Indonesia — world's no.1 padel shop, official PadelPoint Spain franchise partner. Rackets, apparel, shoes & accessories. Jakarta & Bandung." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ===== NAV ===== -->
+    <header class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="#top" class="nav__logo">
+          <img
+            src="images/logo-white.png"
+            alt="Tienda PadelPoint"
+            class="nav__logo-img" />
+        </a>
+        <nav class="nav__links">
+          <a href="#about">About</a>
+          <a href="#products">Products</a>
+          <a href="#stores">Stores</a>
+          <a href="#brands">Brands</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a href="#contact" class="nav__cta">Visit a Store</a>
+        <button class="nav__burger" id="burger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="nav__mobile" id="navMobile">
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#stores">Stores</a>
+        <a href="#brands">Brands</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </header>
 
-<!-- ===== NAV ===== -->
-<header class="nav" id="nav">
-  <div class="nav__inner">
-    <a href="#top" class="nav__logo">
-      <span class="nav__logo-small">tienda</span>
-      <span class="nav__logo-big">PADELPOINT</span>
-    </a>
-    <nav class="nav__links">
-      <a href="#about">About</a>
-      <a href="#products">Products</a>
-      <a href="#stores">Stores</a>
-      <a href="#brands">Brands</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a href="#contact" class="nav__cta">Visit a Store</a>
-    <button class="nav__burger" id="burger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="nav__mobile" id="navMobile">
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#stores">Stores</a>
-    <a href="#brands">Brands</a>
-    <a href="#contact">Contact</a>
-  </div>
-</header>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="top">
+      <div class="hero__court" aria-hidden="true">
+        <div class="court-line court-line--center"></div>
+        <div class="court-line court-line--service"></div>
+      </div>
+      <div class="hero__inner">
+        <p class="eyebrow">
+          Official PadelPoint Spain Franchise Partner · Indonesia
+        </p>
+        <h1 class="hero__title">Gear up.<br />Step on court.</h1>
+        <p class="hero__sub">
+          The world's No.1 padel shop, now in Jakarta &amp; Bandung. Rackets,
+          apparel, shoes and accessories — 100% original, expert-fitted for your
+          game.
+        </p>
+        <div class="hero__ctas">
+          <a href="#stores" class="btn btn--primary">Find a Store</a>
+          <a href="#products" class="btn btn--ghost">See What We Carry</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__num">5,000+</span>
+            <span class="stat__label">Rackets sold</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">6</span>
+            <span class="stat__label">Countries, one standard</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">10+</span>
+            <span class="stat__label">Years in sport retail</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- ===== HERO ===== -->
-<section class="hero" id="top">
-  <div class="hero__court" aria-hidden="true">
-    <div class="court-line court-line--center"></div>
-    <div class="court-line court-line--service"></div>
-  </div>
-  <div class="hero__inner">
-    <p class="eyebrow">Official PadelPoint Spain Franchise Partner · Indonesia</p>
-    <h1 class="hero__title">Gear up.<br>Step on court.</h1>
-    <p class="hero__sub">The world's No.1 padel shop, now in Jakarta &amp; Bandung. Rackets, apparel, shoes and accessories — 100% original, expert-fitted for your game.</p>
-    <div class="hero__ctas">
-      <a href="#stores" class="btn btn--primary">Find a Store</a>
-      <a href="#products" class="btn btn--ghost">See What We Carry</a>
+    <!-- ===== MARQUEE DIVIDER ===== -->
+    <div class="marquee">
+      <div class="marquee__track">
+        <span>BEGINNER&nbsp;TO&nbsp;PRO&nbsp;—&nbsp;</span>
+        <span>RACKETS&nbsp;—&nbsp;</span>
+        <span>APPAREL&nbsp;—&nbsp;</span>
+        <span>SHOES&nbsp;—&nbsp;</span>
+        <span>BAGS&nbsp;—&nbsp;</span>
+        <span>ACCESSORIES&nbsp;—&nbsp;</span>
+        <span>BEGINNER&nbsp;TO&nbsp;PRO&nbsp;—&nbsp;</span>
+        <span>RACKETS&nbsp;—&nbsp;</span>
+        <span>APPAREL&nbsp;—&nbsp;</span>
+        <span>SHOES&nbsp;—&nbsp;</span>
+        <span>BAGS&nbsp;—&nbsp;</span>
+        <span>ACCESSORIES&nbsp;—&nbsp;</span>
+      </div>
     </div>
-    <div class="hero__stats">
-      <div class="stat">
-        <span class="stat__num">5,000+</span>
-        <span class="stat__label">Rackets sold</span>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="about">
+      <div class="about__media">
+        <div class="about__img-wrap">
+          <img
+            src="images/about-1.jpg"
+            alt="Padel players embracing on court"
+            loading="lazy" />
+        </div>
       </div>
-      <div class="stat">
-        <span class="stat__num">6</span>
-        <span class="stat__label">Countries, one standard</span>
+      <div class="about__content">
+        <p class="eyebrow eyebrow--dark">Who We Are</p>
+        <h2 class="section-title">
+          A global name,<br />built for Indonesian courts.
+        </h2>
+        <p class="about__text">
+          Tienda PadelPoint Indonesia is part of a globally established brand
+          recognized across the padel world — with stores in Spain, Portugal,
+          Italy, France, Mexico, and now Indonesia. One standard of quality and
+          expertise, in every market we touch.
+        </p>
+        <p class="about__text">
+          As the world's No.1 padel shop, we carefully select every racket,
+          apparel piece, shoe, bag, and accessory to meet players where they are
+          — first match or competition court.
+        </p>
+        <div class="about__signature">
+          <span class="signature__mark">①</span>
+          <p>
+            Driven by authenticity, quality, and a genuine passion for the
+            sport.
+          </p>
+        </div>
       </div>
-      <div class="stat">
-        <span class="stat__num">10+</span>
-        <span class="stat__label">Years in sport retail</span>
+    </section>
+
+    <!-- ===== VISION / MISSION ===== -->
+    <section class="vm">
+      <div class="vm__card">
+        <span class="vm__tag">Vision</span>
+        <p>
+          To become the leading padel and tennis retail and distribution group
+          in Southeast Asia.
+        </p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MARQUEE DIVIDER ===== -->
-<div class="marquee">
-  <div class="marquee__track">
-    <span>BEGINNER&nbsp;TO&nbsp;PRO&nbsp;—&nbsp;</span>
-    <span>RACKETS&nbsp;—&nbsp;</span>
-    <span>APPAREL&nbsp;—&nbsp;</span>
-    <span>SHOES&nbsp;—&nbsp;</span>
-    <span>BAGS&nbsp;—&nbsp;</span>
-    <span>ACCESSORIES&nbsp;—&nbsp;</span>
-    <span>BEGINNER&nbsp;TO&nbsp;PRO&nbsp;—&nbsp;</span>
-    <span>RACKETS&nbsp;—&nbsp;</span>
-    <span>APPAREL&nbsp;—&nbsp;</span>
-    <span>SHOES&nbsp;—&nbsp;</span>
-    <span>BAGS&nbsp;—&nbsp;</span>
-    <span>ACCESSORIES&nbsp;—&nbsp;</span>
-  </div>
-</div>
-
-<!-- ===== ABOUT ===== -->
-<section class="about" id="about">
-  <div class="about__media">
-    <div class="about__img-wrap">
-      <img src="images/about-1.jpg" alt="Padel players embracing on court" loading="lazy">
-    </div>
-  </div>
-  <div class="about__content">
-    <p class="eyebrow eyebrow--dark">Who We Are</p>
-    <h2 class="section-title">A global name,<br>built for Indonesian courts.</h2>
-    <p class="about__text">Tienda PadelPoint Indonesia is part of a globally established brand recognized across the padel world — with stores in Spain, Portugal, Italy, France, Mexico, and now Indonesia. One standard of quality and expertise, in every market we touch.</p>
-    <p class="about__text">As the world's No.1 padel shop, we carefully select every racket, apparel piece, shoe, bag, and accessory to meet players where they are — first match or competition court.</p>
-    <div class="about__signature">
-      <span class="signature__mark">①</span>
-      <p>Driven by authenticity, quality, and a genuine passion for the sport.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== VISION / MISSION ===== -->
-<section class="vm">
-  <div class="vm__card">
-    <span class="vm__tag">Vision</span>
-    <p>To become the leading padel and tennis retail and distribution group in Southeast Asia.</p>
-  </div>
-  <div class="vm__divider" aria-hidden="true"></div>
-  <div class="vm__card">
-    <span class="vm__tag">Mission</span>
-    <p>To grow padel and tennis in Indonesia through authentic products, expert service, and a premium retail experience for every player.</p>
-  </div>
-</section>
-
-<!-- ===== PRODUCTS ===== -->
-<section class="products" id="products">
-  <p class="eyebrow eyebrow--center">What We Carry</p>
-  <h2 class="section-title section-title--center">Everything for your game</h2>
-  <div class="products__grid">
-    <article class="product-card">
-      <div class="product-card__icon">🎾</div>
-      <h3>Rackets</h3>
-      <p>High-performance padel rackets for every level — control, power, and hybrid builds from world-class brands.</p>
-    </article>
-    <article class="product-card">
-      <div class="product-card__icon">👕</div>
-      <h3>Apparel</h3>
-      <p>Performance shirts, shorts, and skirts built for movement on court, off the rack from top sport labels.</p>
-    </article>
-    <article class="product-card">
-      <div class="product-card__icon">👟</div>
-      <h3>Shoes</h3>
-      <p>Court-specific footwear engineered for grip, lateral support, and long rallies.</p>
-    </article>
-    <article class="product-card">
-      <div class="product-card__icon">🎒</div>
-      <h3>Bags &amp; Accessories</h3>
-      <p>Racket bags, grips, balls, and the small gear that finishes a serious player's kit.</p>
-    </article>
-  </div>
-</section>
-
-<!-- ===== BRANDS ===== -->
-<section class="brands" id="brands">
-  <div class="brands__content">
-    <p class="eyebrow">100% Original</p>
-    <h2 class="section-title section-title--light">Brands we carry</h2>
-    <p class="brands__text">Every product on our wall is sourced direct and guaranteed authentic — no exceptions.</p>
-  </div>
-  <div class="brands__grid">
-    <div class="brand-chip">adidas</div>
-    <div class="brand-chip">Bullpadel</div>
-    <div class="brand-chip">NOX</div>
-    <div class="brand-chip">SIUX</div>
-    <div class="brand-chip">Royal Padel</div>
-  </div>
-</section>
-
-<!-- ===== STORES ===== -->
-<section class="stores" id="stores">
-  <p class="eyebrow eyebrow--center">Visit Us</p>
-  <h2 class="section-title section-title--center">Two stores. Real expertise.</h2>
-  <p class="stores__sub">Walk in for expert consultation and a racket testing area — try before you buy, every time.</p>
-
-  <div class="stores__grid">
-    <article class="store-card">
-      <div class="store-card__img">
-        <img src="images/store-jakarta.jpg" alt="Tienda PadelPoint Jakarta store interior" loading="lazy">
+      <div class="vm__divider" aria-hidden="true"></div>
+      <div class="vm__card">
+        <span class="vm__tag">Mission</span>
+        <p>
+          To grow padel and tennis in Indonesia through authentic products,
+          expert service, and a premium retail experience for every player.
+        </p>
       </div>
-      <div class="store-card__body">
-        <h3>Tienda PadelPoint Jakarta</h3>
-        <p>Official franchise partner of PadelPoint Spain in Indonesia.</p>
-      </div>
-    </article>
-    <article class="store-card">
-      <div class="store-card__img">
-        <img src="images/store-bandung.jpg" alt="Tienda PadelPoint Bandung store interior" loading="lazy">
-      </div>
-      <div class="store-card__body">
-        <h3>Tienda PadelPoint Bandung</h3>
-        <p>Official franchise partner of PadelPoint Spain in Indonesia.</p>
-      </div>
-    </article>
-    <article class="store-card store-card--online">
-      <div class="store-card__img store-card__img--online">
-        <span>Spinnation Padel</span>
-      </div>
-      <div class="store-card__body">
-        <h3>Spinnation Padel</h3>
-        <p>Our online store — browse the full catalogue from anywhere in Indonesia.</p>
-      </div>
-    </article>
-  </div>
-</section>
+    </section>
 
-<!-- ===== GROUP STRENGTH ===== -->
-<section class="group">
-  <div class="group__content">
-    <p class="eyebrow">Backed By</p>
-    <h2 class="section-title section-title--light">Our group strength</h2>
-    <p class="group__text">With over 10 years of experience in the sports industry, Tienda PadelPoint Indonesia is part of <strong>Arunika Group</strong> — a strong footprint in sports and wellness, including gym equipment distribution for international brands like DHZ, Insight, and Impulse. A solid foundation to grow sustainably, with reliability and scale.</p>
-    <div class="group__brands">
-      <span>Impulse</span>
-      <span>DHZ Fitness</span>
-      <span>Insight</span>
-    </div>
-  </div>
-</section>
+    <!-- ===== PRODUCTS ===== -->
+    <section class="products" id="products">
+      <p class="eyebrow eyebrow--center">What We Carry</p>
+      <h2 class="section-title section-title--center">
+        Everything for your game
+      </h2>
+      <div class="products__grid">
+        <article class="product-card">
+          <div class="product-card__icon">🎾</div>
+          <h3>Rackets</h3>
+          <p>
+            High-performance padel rackets for every level — control, power, and
+            hybrid builds from world-class brands.
+          </p>
+        </article>
+        <article class="product-card">
+          <div class="product-card__icon">👕</div>
+          <h3>Apparel</h3>
+          <p>
+            Performance shirts, shorts, and skirts built for movement on court,
+            off the rack from top sport labels.
+          </p>
+        </article>
+        <article class="product-card">
+          <div class="product-card__icon">👟</div>
+          <h3>Shoes</h3>
+          <p>
+            Court-specific footwear engineered for grip, lateral support, and
+            long rallies.
+          </p>
+        </article>
+        <article class="product-card">
+          <div class="product-card__icon">🎒</div>
+          <h3>Bags &amp; Accessories</h3>
+          <p>
+            Racket bags, grips, balls, and the small gear that finishes a
+            serious player's kit.
+          </p>
+        </article>
+      </div>
+    </section>
 
-<!-- ===== CONTACT ===== -->
-<section class="contact" id="contact">
-  <p class="eyebrow eyebrow--center">Get In Touch</p>
-  <h2 class="section-title section-title--center">Come find your racket</h2>
-  <div class="contact__grid">
-    <a href="tel:+6287777761015" class="contact-card">
-      <span class="contact-card__label">Phone</span>
-      <span class="contact-card__value">+62 877-7776-1015</span>
-    </a>
-    <a href="https://wa.me/6287777761015" class="contact-card" target="_blank" rel="noopener">
-      <span class="contact-card__label">WhatsApp</span>
-      <span class="contact-card__value">Chat with us</span>
-    </a>
-    <div class="contact-card contact-card--address">
-      <span class="contact-card__label">Address</span>
-      <span class="contact-card__value">PT. Tienda Padelpoint Indonesia<br>Jl. Camar Blok CC, Kota Jakarta Timur,<br>DKI Jakarta</span>
-    </div>
-  </div>
-</section>
+    <!-- ===== BRANDS ===== -->
+    <section class="brands" id="brands">
+      <div class="brands__content">
+        <p class="eyebrow">100% Original</p>
+        <h2 class="section-title section-title--light">Brands we carry</h2>
+        <p class="brands__text">
+          Every product on our wall is sourced direct and guaranteed authentic —
+          no exceptions.
+        </p>
+      </div>
+      <div class="brands__grid">
+        <div class="brand-chip">
+          <img src="images/brands/adidas.png" alt="Adidas" />
+        </div>
+        <div class="brand-chip">
+          <img src="images/brands/bullpadel.png" alt="Bullpadel" />
+        </div>
+        <div class="brand-chip">
+          <img src="images/brands/nox.png" alt="NOX" />
+        </div>
+        <div class="brand-chip">
+          <img src="images/brands/siux.png" alt="SIUX" />
+        </div>
+        <div class="brand-chip">
+          <img src="images/brands/royalpadel.png" alt="Royal Padel" />
+        </div>
+        <div class="brand-chip">
+          <img src="images/brands/babolat.png" alt="Babolat" />
+        </div>
+        <div class="brand-chip">
+          <img src="images/brands/head.png" alt="HEAD" />
+        </div>
+        <div class="brand-chip">
+          <img src="images/brands/asics.png" alt="Asics" />
+        </div>
+        <div class="brand-chip">
+          <img src="images/brands/tactical.png" alt="Tactical" />
+        </div>
+      </div>
+    </section>
 
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="footer__inner">
-    <div class="footer__logo">
-      <span>tienda</span>
-      <strong>PADELPOINT</strong>
-    </div>
-    <p>&copy; 2026 PT. Tienda Padelpoint Indonesia. Official PadelPoint Spain franchise partner.</p>
-  </div>
-</footer>
+    <!-- ===== STORES ===== -->
+    <section class="stores" id="stores">
+      <p class="eyebrow eyebrow--center">Visit Us</p>
+      <h2 class="section-title section-title--center">
+        Two stores. Real expertise.
+      </h2>
+      <p class="stores__sub">
+        Walk in for expert consultation and a racket testing area — try before
+        you buy, every time.
+      </p>
 
-<script src="js/main.js"></script>
-</body>
+      <div class="stores__grid">
+        <article class="store-card">
+          <div class="store-card__img">
+            <img
+              src="images/store-jakarta.jpg"
+              alt="Tienda PadelPoint Jakarta store interior"
+              loading="lazy" />
+          </div>
+          <div class="store-card__body">
+            <h3>Tienda PadelPoint Jakarta</h3>
+            <p>Official franchise partner of PadelPoint Spain in Indonesia.</p>
+          </div>
+        </article>
+        <article class="store-card">
+          <div class="store-card__img">
+            <img
+              src="images/store-bandung.jpg"
+              alt="Tienda PadelPoint Bandung store interior"
+              loading="lazy" />
+          </div>
+          <div class="store-card__body">
+            <h3>Tienda PadelPoint Bandung</h3>
+            <p>Official franchise partner of PadelPoint Spain in Indonesia.</p>
+          </div>
+        </article>
+        <article class="store-card store-card--online">
+          <div class="store-card__img store-card__img--online">
+            <span>Spinnation Padel</span>
+          </div>
+          <div class="store-card__body">
+            <h3>Spinnation Padel</h3>
+            <p>
+              Our online store — browse the full catalogue from anywhere in
+              Indonesia.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== GROUP STRENGTH ===== -->
+    <section class="group">
+      <div class="group__content">
+        <p class="eyebrow">Backed By</p>
+        <h2 class="section-title section-title--light">Our group strength</h2>
+        <p class="group__text">
+          With over 10 years of experience in the sports industry, Tienda
+          PadelPoint Indonesia is part of <strong>Arunika Group</strong> — a
+          strong footprint in sports and wellness, including gym equipment
+          distribution for international brands like DHZ, Insight, and Impulse.
+          A solid foundation to grow sustainably, with reliability and scale.
+        </p>
+        <div class="group__brands">
+          <span>Impulse</span>
+          <span>DHZ Fitness</span>
+          <span>Insight</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact">
+      <p class="eyebrow eyebrow--center">Get In Touch</p>
+      <h2 class="section-title section-title--center">Come find your racket</h2>
+      <div class="contact__grid">
+        <a href="tel:+6287777761015" class="contact-card">
+          <span class="contact-card__label">Phone</span>
+          <span class="contact-card__value">+62 877-7776-1015</span>
+        </a>
+        <a
+          href="https://wa.me/6287777761015"
+          class="contact-card"
+          target="_blank"
+          rel="noopener">
+          <span class="contact-card__label">WhatsApp</span>
+          <span class="contact-card__value">Chat with us</span>
+        </a>
+        <div class="contact-card contact-card--address">
+          <span class="contact-card__label">Address</span>
+          <span class="contact-card__value"
+            >PT. Tienda Padelpoint Indonesia<br />Jl. Camar Blok CC, Kota
+            Jakarta Timur,<br />DKI Jakarta</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__logo">
+          <img src="images/logo-white.png" alt="Tienda PadelPoint" />
+        </div>
+        <p>
+          &copy; 2026 PT. Tienda Padelpoint Indonesia. Official PadelPoint Spain
+          franchise partner.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
