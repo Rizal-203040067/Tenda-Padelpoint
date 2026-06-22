@@ -12,7 +12,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800&display=swap"
       rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css?v=3" />
   </head>
   <body>
     <!-- ===== NAV ===== -->
@@ -25,13 +25,32 @@
             class="nav__logo-img"
             width="98"
             height="30"
-            style="height: 40px; width: auto" />
+            style="height: 30px; width: auto" />
         </a>
         <nav class="nav__links">
           <a href="#about">About</a>
-          <a href="#products">Products</a>
-          <a href="#stores">Stores</a>
+          <div class="nav__dropdown">
+            <a href="#stores" class="nav__dropdown-trigger"
+              >Stores <span class="nav__caret">▾</span></a
+            >
+            <div class="nav__dropdown-menu">
+              <a href="#stores">Jakarta</a>
+              <a href="#stores">Bandung</a>
+            </div>
+          </div>
+          <div class="nav__dropdown">
+            <a href="#products" class="nav__dropdown-trigger"
+              >Products <span class="nav__caret">▾</span></a
+            >
+            <div class="nav__dropdown-menu">
+              <a href="products.html?cat=rackets">Rackets</a>
+              <a href="products.html?cat=shoes">Shoes</a>
+              <a href="products.html?cat=apparel">Apparel</a>
+              <a href="products.html?cat=accessories">Accessories</a>
+            </div>
+          </div>
           <a href="#brands">Brands</a>
+          <a href="#players">Pro Players</a>
           <a href="#contact">Contact</a>
         </nav>
         <a href="#contact" class="nav__cta">Visit a Store</a>
@@ -41,9 +60,18 @@
       </div>
       <div class="nav__mobile" id="navMobile">
         <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#stores">Stores</a>
+        <span class="nav__mobile-label">Stores</span>
+        <a href="#stores" class="nav__mobile-sub">Jakarta</a>
+        <a href="#stores" class="nav__mobile-sub">Bandung</a>
+        <span class="nav__mobile-label">Products</span>
+        <a href="products.html?cat=rackets" class="nav__mobile-sub">Rackets</a>
+        <a href="products.html?cat=shoes" class="nav__mobile-sub">Shoes</a>
+        <a href="products.html?cat=apparel" class="nav__mobile-sub">Apparel</a>
+        <a href="products.html?cat=accessories" class="nav__mobile-sub"
+          >Accessories</a
+        >
         <a href="#brands">Brands</a>
+        <a href="#players">Pro Players</a>
         <a href="#contact">Contact</a>
       </div>
     </header>
@@ -87,19 +115,15 @@
 
     <!-- ===== MARQUEE DIVIDER ===== -->
     <div class="marquee">
-      <div class="marquee__track">
-        <span>BEGINNER&nbsp;TO&nbsp;PRO&nbsp;—&nbsp;</span>
-        <span>RACKETS&nbsp;—&nbsp;</span>
-        <span>APPAREL&nbsp;—&nbsp;</span>
-        <span>SHOES&nbsp;—&nbsp;</span>
-        <span>BAGS&nbsp;—&nbsp;</span>
-        <span>ACCESSORIES&nbsp;—&nbsp;</span>
-        <span>BEGINNER&nbsp;TO&nbsp;PRO&nbsp;—&nbsp;</span>
-        <span>RACKETS&nbsp;—&nbsp;</span>
-        <span>APPAREL&nbsp;—&nbsp;</span>
-        <span>SHOES&nbsp;—&nbsp;</span>
-        <span>BAGS&nbsp;—&nbsp;</span>
-        <span>ACCESSORIES&nbsp;—&nbsp;</span>
+      <div class="marquee__track" id="marqueeTrack">
+        <div class="marquee__group">
+          <span>BEGINNER&nbsp;TO&nbsp;PRO&nbsp;—&nbsp;</span>
+          <span>RACKETS&nbsp;—&nbsp;</span>
+          <span>APPAREL&nbsp;—&nbsp;</span>
+          <span>SHOES&nbsp;—&nbsp;</span>
+          <span>BAGS&nbsp;—&nbsp;</span>
+          <span>ACCESSORIES&nbsp;—&nbsp;</span>
+        </div>
       </div>
     </div>
 
@@ -292,6 +316,444 @@
       </div>
     </section>
 
+    <!-- ===== PRO PLAYERS ===== -->
+    <section class="players" id="players">
+      <p class="eyebrow eyebrow--center">FIP World Rankings</p>
+      <h2 class="section-title section-title--center">Pro players</h2>
+      <p class="players__sub">
+        The world's best play with the gear we carry — current FIP top 10, men's
+        and women's.
+      </p>
+
+      <div class="players__tabs" role="tablist" aria-label="Player rankings">
+        <button
+          class="players__tab players__tab--active"
+          role="tab"
+          aria-selected="true"
+          data-gender="men">
+          Men
+        </button>
+        <button
+          class="players__tab"
+          role="tab"
+          aria-selected="false"
+          data-gender="women">
+          Women
+        </button>
+      </div>
+
+      <div class="players__grid" data-panel="men">
+        <article class="player-card">
+          <span class="player-card__rank">1</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/coello.jpg"
+              alt="Arturo Coello"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">21,623 points</span>
+            <h3>Arturo Coello</h3>
+            <span class="player-card__country">🇪🇸 Spain</span>
+          </div>
+        </article>
+        <article class="player-card">
+          <span class="player-card__rank">1</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/tapia.jpg"
+              alt="Agustin Tapia"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">21,623 points</span>
+            <h3>Agustin Tapia</h3>
+            <span class="player-card__country">🇦🇷 Argentina</span>
+          </div>
+        </article>
+        <article class="player-card">
+          <span class="player-card__rank">3</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/galan.jpg"
+              alt="Alejandro Galan"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">17,626 points</span>
+            <h3>Alejandro Galan</h3>
+            <span class="player-card__country">🇪🇸 Spain</span>
+          </div>
+        </article>
+        <article class="player-card">
+          <span class="player-card__rank">3</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/chingotto.jpg"
+              alt="Federico Chingotto"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">17,626 points</span>
+            <h3>Federico Chingotto</h3>
+            <span class="player-card__country">🇦🇷 Argentina</span>
+          </div>
+        </article>
+        <article class="player-card">
+          <span class="player-card__rank">5</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/lebron.jpg"
+              alt="Juan Lebron"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">7,800 points</span>
+            <h3>Juan Lebron</h3>
+            <span class="player-card__country">🇪🇸 Spain</span>
+          </div>
+        </article>
+        <article class="player-card">
+          <span class="player-card__rank">6</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/augsburger.jpg"
+              alt="Leandro Augsburger"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">7,026 points</span>
+            <h3>Leandro Augsburger</h3>
+            <span class="player-card__country">🇦🇷 Argentina</span>
+          </div>
+        </article>
+        <article class="player-card">
+          <span class="player-card__rank">7</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/stupaczuk.jpg"
+              alt="Franco Stupaczuk"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">7,020 points</span>
+            <h3>Franco Stupaczuk</h3>
+            <span class="player-card__country">🇦🇷 Argentina</span>
+          </div>
+        </article>
+        <article class="player-card">
+          <span class="player-card__rank">8</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/yanguas.jpg"
+              alt="Miguel Yanguas"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">6,921 points</span>
+            <h3>Miguel Yanguas</h3>
+            <span class="player-card__country">🇪🇸 Spain</span>
+          </div>
+        </article>
+        <article class="player-card">
+          <span class="player-card__rank">9</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/nieto.jpg"
+              alt="Jorge Nieto"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">5,946 points</span>
+            <h3>Jorge Nieto</h3>
+            <span class="player-card__country">🇪🇸 Spain</span>
+          </div>
+        </article>
+        <article class="player-card">
+          <span class="player-card__rank">10</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/navarro.jpg"
+              alt="Francisco Navarro"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">5,881 points</span>
+            <h3>Francisco Navarro</h3>
+            <span class="player-card__country">🇪🇸 Spain</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="players__grid" data-panel="women" hidden>
+        <article class="player-card">
+          <span class="player-card__rank">1</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/triay.jpg"
+              alt="Gemma Triay Pons"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">17,723 points</span>
+            <h3>Gemma Triay Pons</h3>
+            <span class="player-card__country">🇪🇸 Spain</span>
+          </div>
+        </article>
+        <article class="player-card">
+          <span class="player-card__rank">1</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/brea.jpg"
+              alt="Delfina Brea Senesi"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">17,723 points</span>
+            <h3>Delfina Brea Senesi</h3>
+            <span class="player-card__country">🇦🇷 Argentina</span>
+          </div>
+        </article>
+        <article class="player-card">
+          <span class="player-card__rank">3</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/gonzalez.jpg"
+              alt="Beatriz Gonzalez Fernandez"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">14,731 points</span>
+            <h3>Beatriz Gonzalez Fernandez</h3>
+            <span class="player-card__country">🇪🇸 Spain</span>
+          </div>
+        </article>
+        <article class="player-card">
+          <span class="player-card__rank">4</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/josemaria.jpg"
+              alt="Paula Josemaria Martin"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">14,026 points</span>
+            <h3>Paula Josemaria Martin</h3>
+            <span class="player-card__country">🇪🇸 Spain</span>
+          </div>
+        </article>
+        <article class="player-card">
+          <span class="player-card__rank">5</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/sanchez.jpg"
+              alt="Ariana Sanchez Fallada"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">13,606 points</span>
+            <h3>Ariana Sanchez Fallada</h3>
+            <span class="player-card__country">🇪🇸 Spain</span>
+          </div>
+        </article>
+        <article class="player-card">
+          <span class="player-card__rank">6</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/fernandez.jpg"
+              alt="Claudia Fernandez Sanchez"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">11,981 points</span>
+            <h3>Claudia Fernandez Sanchez</h3>
+            <span class="player-card__country">🇪🇸 Spain</span>
+          </div>
+        </article>
+        <article class="player-card">
+          <span class="player-card__rank">7</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/ustero.jpg"
+              alt="Andrea Ustero Prieto"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">9,568 points</span>
+            <h3>Andrea Ustero Prieto</h3>
+            <span class="player-card__country">🇪🇸 Spain</span>
+          </div>
+        </article>
+        <article class="player-card">
+          <span class="player-card__rank">8</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/araujo.jpg"
+              alt="Sofia Araujo"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">7,566 points</span>
+            <h3>Sofia Araujo</h3>
+            <span class="player-card__country">🇵🇹 Portugal</span>
+          </div>
+        </article>
+        <article class="player-card">
+          <span class="player-card__rank">9</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/icardo.jpg"
+              alt="Tamara Icardo Alcorisa"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">6,326 points</span>
+            <h3>Tamara Icardo Alcorisa</h3>
+            <span class="player-card__country">🇪🇸 Spain</span>
+          </div>
+        </article>
+        <article class="player-card">
+          <span class="player-card__rank">10</span>
+          <div class="player-card__photo">
+            <img
+              src="images/players/ortega.jpg"
+              alt="Marta Ortega Gallego"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              " />
+          </div>
+          <div class="player-card__body">
+            <span class="player-card__points">6,236 points</span>
+            <h3>Marta Ortega Gallego</h3>
+            <span class="player-card__country">🇪🇸 Spain</span>
+          </div>
+        </article>
+      </div>
+
+      <p class="players__footnote">
+        Rankings reflect official FIP standings as of June 2026 and update
+        periodically through the season.
+      </p>
+    </section>
+
     <!-- ===== STORES ===== -->
     <section class="stores" id="stores">
       <p class="eyebrow eyebrow--center">Visit Us</p>
@@ -338,18 +800,6 @@
           <div class="store-card__body">
             <h3>Tienda PadelPoint Bandung</h3>
             <p>Official franchise partner of PadelPoint Spain in Indonesia.</p>
-          </div>
-        </article>
-        <article class="store-card store-card--online">
-          <div class="store-card__img store-card__img--online">
-            <span>Spinnation Padel</span>
-          </div>
-          <div class="store-card__body">
-            <h3>Spinnation Padel</h3>
-            <p>
-              Our online store — browse the full catalogue from anywhere in
-              Indonesia.
-            </p>
           </div>
         </article>
       </div>

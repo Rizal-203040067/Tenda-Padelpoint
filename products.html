@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Products — Tienda PadelPoint Indonesia</title>
+    <meta
+      name="description"
+      content="Browse rackets, apparel, shoes, and accessories from Tienda PadelPoint Indonesia — 100% original padel gear." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css?v=3" />
+  </head>
+  <body>
+    <!-- ===== NAV ===== -->
+    <header class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="index.html#top" class="nav__logo">
+          <img
+            src="images/logo-white.png"
+            alt="Tienda PadelPoint"
+            class="nav__logo-img"
+            width="98"
+            height="30"
+            style="height: 30px; width: auto" />
+        </a>
+        <nav class="nav__links">
+          <a href="index.html#about">About</a>
+          <div class="nav__dropdown">
+            <a href="index.html#stores" class="nav__dropdown-trigger"
+              >Stores <span class="nav__caret">▾</span></a
+            >
+            <div class="nav__dropdown-menu">
+              <a href="index.html#stores">Jakarta</a>
+              <a href="index.html#stores">Bandung</a>
+            </div>
+          </div>
+          <div class="nav__dropdown">
+            <a href="products.html" class="nav__dropdown-trigger"
+              >Products <span class="nav__caret">▾</span></a
+            >
+            <div class="nav__dropdown-menu">
+              <a href="products.html?cat=rackets">Rackets</a>
+              <a href="products.html?cat=shoes">Shoes</a>
+              <a href="products.html?cat=apparel">Apparel</a>
+              <a href="products.html?cat=accessories">Accessories</a>
+            </div>
+          </div>
+          <a href="index.html#brands">Brands</a>
+          <a href="index.html#players">Pro Players</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <a href="index.html#contact" class="nav__cta">Visit a Store</a>
+        <button class="nav__burger" id="burger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="nav__mobile" id="navMobile">
+        <a href="index.html#about">About</a>
+        <span class="nav__mobile-label">Stores</span>
+        <a href="index.html#stores" class="nav__mobile-sub">Jakarta</a>
+        <a href="index.html#stores" class="nav__mobile-sub">Bandung</a>
+        <span class="nav__mobile-label">Products</span>
+        <a href="products.html?cat=rackets" class="nav__mobile-sub">Rackets</a>
+        <a href="products.html?cat=shoes" class="nav__mobile-sub">Shoes</a>
+        <a href="products.html?cat=apparel" class="nav__mobile-sub">Apparel</a>
+        <a href="products.html?cat=accessories" class="nav__mobile-sub"
+          >Accessories</a
+        >
+        <a href="index.html#brands">Brands</a>
+        <a href="index.html#players">Pro Players</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </header>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="shop-header">
+      <div class="shop-header__inner">
+        <p class="eyebrow">Shop</p>
+        <h1 class="shop-header__title" id="shopTitle">All Products</h1>
+        <p class="shop-header__sub" id="shopCount">Showing all items</p>
+        <p class="shop-header__note">
+          Prices available in-store — visit us or chat on WhatsApp to check
+          stock and pricing.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== FILTER BAR ===== -->
+    <section class="shop-filters">
+      <div class="shop-filters__inner">
+        <div
+          class="shop-filters__group"
+          role="group"
+          aria-label="Filter by category">
+          <button class="filter-chip" data-cat="all">All</button>
+          <button class="filter-chip" data-cat="rackets">Rackets</button>
+          <button class="filter-chip" data-cat="shoes">Shoes</button>
+          <button class="filter-chip" data-cat="apparel">Apparel</button>
+          <button class="filter-chip" data-cat="accessories">
+            Accessories
+          </button>
+        </div>
+        <select
+          class="shop-filters__sort"
+          id="sortSelect"
+          aria-label="Sort products">
+          <option value="default">Sort: Featured</option>
+          <option value="name-asc">Name: A–Z</option>
+          <option value="brand-asc">Brand: A–Z</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- ===== PRODUCT GRID ===== -->
+    <section class="shop-grid-section">
+      <div class="shop-grid" id="productGrid"></div>
+      <p class="shop-empty" id="emptyState" hidden>
+        No products in this category right now — check back soon.
+      </p>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__logo">
+          <img
+            src="images/logo-white.png"
+            alt="Tienda PadelPoint"
+            width="92"
+            height="28"
+            style="height: 28px; width: auto" />
+        </div>
+        <p>
+          &copy; 2026 PT. Tienda Padelpoint Indonesia. Official PadelPoint Spain
+          franchise partner.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+  </body>
+</html>
