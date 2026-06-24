@@ -13,15 +13,22 @@ if (burger && navMobile) {
   });
 }
 
-// Marquee: clone the first group until the track is at least 2x the
-// container width, then animate by exactly one group's width. Since every
-// copy is an identical DOM clone (not just "equal" CSS-measured text), the
-// loop point is guaranteed seamless regardless of font rendering/hinting.
-function initMarquee() {
-  const track = document.getElementById("marqueeTrack");
+// Generic infinite-scroll initializer: clones the first .X__group inside
+// a track until there's at least 2x the container width of content, then
+// animates by exactly one group's measured pixel width. Since every copy
+// is an identical DOM clone (not just "equal" CSS-measured content), the
+// loop point is guaranteed seamless regardless of font/image rendering.
+function initInfiniteScroll({
+  trackId,
+  groupSelector,
+  distanceVar,
+  readyClass,
+  speedPxPerSec,
+}) {
+  const track = document.getElementById(trackId);
   if (!track) return;
 
-  const firstGroup = track.querySelector(".marquee__group");
+  const firstGroup = track.querySelector(groupSelector);
   if (!firstGroup) return;
 
   const container = track.parentElement;
@@ -33,7 +40,7 @@ function initMarquee() {
   track.appendChild(firstGroup);
 
   let groupWidth = firstGroup.getBoundingClientRect().width;
-  if (groupWidth === 0) return; // fonts not ready / hidden; bail safely
+  if (groupWidth === 0) return; // fonts/images not ready, or hidden; bail safely
 
   // Fill enough copies to cover at least 2x the visible width, so there's
   // always a full, identical copy ready to slide in behind the one leaving.
@@ -45,26 +52,53 @@ function initMarquee() {
     track.appendChild(firstGroup.cloneNode(true));
   }
 
-  // Recompute exact single-group width after cloning (fonts now definitely
-  // rendered) and drive the animation distance from real measured pixels
-  // instead of a CSS "-50%" guess.
+  // Recompute exact single-group width after cloning (images/fonts now
+  // definitely rendered) and drive the animation distance from real
+  // measured pixels instead of a CSS "-50%" guess.
   groupWidth = firstGroup.getBoundingClientRect().width;
-  const speedPxPerSec = 60; // tune feel here instead of guessing a duration
   const duration = groupWidth / speedPxPerSec;
 
-  track.style.setProperty("--marquee-distance", `-${groupWidth}px`);
+  track.style.setProperty(distanceVar, `-${groupWidth}px`);
   track.style.animationDuration = `${duration}s`;
-  track.classList.add("marquee__track--ready");
+  track.classList.add(readyClass);
+}
+
+function initMarquee() {
+  initInfiniteScroll({
+    trackId: "marqueeTrack",
+    groupSelector: ".marquee__group",
+    distanceVar: "--marquee-distance",
+    readyClass: "marquee__track--ready",
+    speedPxPerSec: 60,
+  });
+}
+
+function initBrandsSlider() {
+  initInfiniteScroll({
+    trackId: "brandsTrack",
+    groupSelector: ".brands__group",
+    distanceVar: "--brands-distance",
+    readyClass: "brands__track--ready",
+    speedPxPerSec: 40,
+  });
+}
+
+function initAllInfiniteScrollers() {
+  initMarquee();
+  initBrandsSlider();
 }
 
 if (document.fonts && document.fonts.ready) {
-  document.fonts.ready.then(initMarquee);
+  document.fonts.ready.then(initAllInfiniteScrollers);
 } else {
-  window.addEventListener("load", initMarquee);
+  window.addEventListener("load", initAllInfiniteScrollers);
 }
 window.addEventListener("resize", () => {
-  clearTimeout(window.__marqueeResizeTimer);
-  window.__marqueeResizeTimer = setTimeout(initMarquee, 200);
+  clearTimeout(window.__infiniteScrollResizeTimer);
+  window.__infiniteScrollResizeTimer = setTimeout(
+    initAllInfiniteScrollers,
+    200,
+  );
 });
 
 // Pro Players: Men / Women tab switching
