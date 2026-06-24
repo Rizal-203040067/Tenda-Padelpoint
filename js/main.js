@@ -79,7 +79,7 @@ function initBrandsSlider() {
     groupSelector: ".brands__group",
     distanceVar: "--brands-distance",
     readyClass: "brands__track--ready",
-    speedPxPerSec: 40,
+    speedPxPerSec: 60,
   });
 }
 

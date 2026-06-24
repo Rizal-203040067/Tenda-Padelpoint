@@ -1,20 +1,21 @@
 /* =========================================================
    TIENDA PADELPOINT — DESIGN TOKENS
-   Navy #0B1455 · Teal #5BC4C9 · Warm white #F7F7F5
+   Black #000000 · White #FFFFFF · Gray #666666 
    Ink #13151A · Coral #FF6B4A (sparingly, primary CTA only)
    Display: Archivo Black · Body: Archivo
    ========================================================= */
 
 :root {
-  --navy: #0b1455;
-  --navy-deep: #070b38;
-  --teal: #5bc4c9;
-  --teal-light: #dcf1f2;
-  --cream: #f7f7f5;
-  --ink: #13151a;
-  --ink-soft: #4a4d57;
-  --coral: #ff6b4a;
-  --line: rgba(11, 20, 85, 0.12);
+  --black: #000000;
+  --black-soft: #111111;
+
+  --white: #ffffff;
+  --white-soft: #f5f5f5;
+
+  --gray: #6b7280;
+  --gray-light: #e5e7eb;
+
+  --line: rgba(0, 0, 0, 0.08);
 
   --font-display: "Archivo Black", sans-serif;
   --font-body: "Archivo", sans-serif;
@@ -34,8 +35,8 @@ html {
 
 body {
   font-family: var(--font-body);
-  color: var(--ink);
-  background: var(--cream);
+  color: var(--black);
+  background: var(--white);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -50,16 +51,16 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *:not(.marquee__track),
-  *:not(.marquee__track)::before,
-  *:not(.marquee__track)::after {
+  *:not(.marquee__track, .brands__track),
+  *:not(.marquee__track, .brands__track)::before,
+  *:not(.marquee__track, .brands__track)::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
 }
 
 :focus-visible {
-  outline: 3px solid var(--coral);
+  outline: 3px solid var(--black);
   outline-offset: 2px;
 }
 
@@ -69,12 +70,12 @@ a {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--white);
   margin-bottom: 14px;
   display: block;
 }
 .eyebrow--dark {
-  color: var(--navy);
+  color: var(--black);
 }
 .eyebrow--center {
   text-align: center;
@@ -85,7 +86,7 @@ a {
   font-size: clamp(2rem, 4.2vw, 3.1rem);
   line-height: 1.05;
   letter-spacing: -0.01em;
-  color: var(--navy);
+  color: var(--black);
 }
 .section-title--center {
   text-align: center;
@@ -112,12 +113,12 @@ a {
   border: 2px solid transparent;
 }
 .btn--primary {
-  background: var(--coral);
+  background: var(--black);
   color: #fff;
 }
 .btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(255, 107, 74, 0.35);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }
 .btn--ghost {
   border-color: rgba(255, 255, 255, 0.45);
@@ -135,7 +136,7 @@ a {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(7, 11, 56, 0.88);
+  background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -167,7 +168,7 @@ a {
   transition: color 0.15s ease;
 }
 .nav__links > a:hover {
-  color: var(--teal);
+  color: var(--white);
 }
 .nav__dropdown {
   position: relative;
@@ -183,7 +184,7 @@ a {
   cursor: pointer;
 }
 .nav__dropdown-trigger:hover {
-  color: var(--teal);
+  color: var(--white);
 }
 .nav__caret {
   font-size: 0.7rem;
@@ -197,7 +198,7 @@ a {
   top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(4px);
-  background: var(--navy-deep);
+  background: var(--black-soft);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 6px;
   padding: 8px;
@@ -228,11 +229,11 @@ a {
     color 0.15s ease;
 }
 .nav__dropdown-menu a:hover {
-  background: rgba(91, 196, 201, 0.12);
-  color: var(--teal);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
 }
 .nav__cta {
-  background: var(--coral);
+  background: var(--black);
   color: #fff;
   padding: 10px 20px;
   border-radius: 4px;
@@ -275,7 +276,7 @@ a {
 .nav__mobile {
   display: none;
   flex-direction: column;
-  background: var(--navy-deep);
+  background: var(--black-soft);
   padding: 8px 24px 20px;
 }
 .nav__mobile a {
@@ -306,12 +307,7 @@ a {
 /* ---------- hero ---------- */
 .hero {
   position: relative;
-  background: linear-gradient(
-    165deg,
-    var(--navy) 0%,
-    var(--navy-deep) 65%,
-    #050731 100%
-  );
+  background: linear-gradient(180deg, #000000 0%, #111111 100%);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -326,7 +322,7 @@ a {
 }
 .court-line {
   position: absolute;
-  background: rgba(91, 196, 201, 0.18);
+  background: rgba(255, 255, 255, 0.12);
 }
 .court-line--center {
   left: 50%;
@@ -383,7 +379,7 @@ a {
 .stat__num {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 3vw, 2.4rem);
-  color: var(--teal);
+  color: var(--white);
 }
 .stat__label {
   font-size: 0.85rem;
@@ -393,7 +389,7 @@ a {
 
 /* ---------- marquee ---------- */
 .marquee {
-  background: var(--coral);
+  background: var(--black);
   overflow: hidden;
   padding: 14px 0;
 }
@@ -439,7 +435,7 @@ a {
   border-radius: 6px;
   overflow: hidden;
   aspect-ratio: 4/5;
-  background: var(--navy);
+  background: var(--black);
 }
 .about__img-wrap img {
   width: 100%;
@@ -447,7 +443,7 @@ a {
   object-fit: cover;
 }
 .about__text {
-  color: var(--ink-soft);
+  color: var(--gray);
   font-size: 1.05rem;
   line-height: 1.7;
   margin-top: 20px;
@@ -475,7 +471,7 @@ a {
 .vm__tag {
   font-family: var(--font-display);
   font-size: 0.85rem;
-  color: var(--coral);
+  color: var(--black);
   display: block;
   margin-bottom: 12px;
   letter-spacing: 0.05em;
@@ -483,7 +479,7 @@ a {
 .vm__card p {
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--navy);
+  color: var(--black);
   line-height: 1.4;
 }
 .vm__divider {
@@ -511,12 +507,12 @@ a {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
-  background: var(--line);
+  background: var(--gray-light);
   border: 1px solid var(--line);
   margin-top: 56px;
 }
 .product-card {
-  background: var(--cream);
+  background: var(--white);
   padding: 40px 28px;
   transition: background 0.2s ease;
 }
@@ -530,12 +526,12 @@ a {
 .product-card h3 {
   font-family: var(--font-display);
   font-size: 1.1rem;
-  color: var(--navy);
+  color: var(--black);
   margin-bottom: 12px;
 }
 .product-card p {
   font-size: 0.92rem;
-  color: var(--ink-soft);
+  color: var(--gray);
   line-height: 1.55;
 }
 @media (max-width: 900px) {
@@ -551,7 +547,7 @@ a {
 
 /* ---------- brands ---------- */
 .brands {
-  background: var(--navy);
+  background: var(--black);
   padding: 100px 24px;
 }
 .brands__content {
@@ -591,7 +587,7 @@ a {
   --brands-distance: -50%;
 }
 .brands__track--ready {
-  animation: brands-scroll 32s linear infinite;
+  animation: brands-scroll 6s linear infinite;
 }
 .brands__group {
   display: flex;
@@ -628,8 +624,8 @@ a {
   object-fit: contain;
 }
 .brand-chip:hover {
-  border-color: var(--teal);
-  background: rgba(91, 196, 201, 0.08);
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
 }
 .brands__slider:hover .brands__track--ready {
   animation-play-state: paused;
@@ -651,7 +647,7 @@ a {
   text-align: center;
   max-width: 560px;
   margin: 0 auto 36px;
-  color: var(--ink-soft);
+  color: var(--gray);
   font-size: 1.05rem;
 }
 .players__tabs {
@@ -664,7 +660,7 @@ a {
   font-family: var(--font-body);
   font-size: 0.92rem;
   font-weight: 700;
-  color: var(--ink-soft);
+  color: var(--gray);
   background: transparent;
   border: 1.5px solid var(--line);
   border-radius: 100px;
@@ -676,11 +672,11 @@ a {
     color 0.15s ease;
 }
 .players__tab:hover {
-  border-color: var(--navy);
+  border-color: var(--black);
 }
 .players__tab--active {
-  background: var(--navy);
-  border-color: var(--navy);
+  background: var(--black);
+  border-color: var(--black);
   color: #fff;
 }
 .players__grid {
@@ -695,7 +691,7 @@ a {
   position: relative;
   border-radius: 6px;
   overflow: hidden;
-  background: #fff;
+  background: var(--white);
   border: 1px solid var(--line);
   transition:
     transform 0.2s ease,
@@ -703,14 +699,14 @@ a {
 }
 .player-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(11, 20, 85, 0.12);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
 }
 .player-card__rank {
   position: absolute;
   top: 12px;
   left: 12px;
   z-index: 2;
-  background: var(--coral);
+  background: var(--black);
   color: #fff;
   font-family: var(--font-display);
   font-size: 0.95rem;
@@ -723,7 +719,7 @@ a {
 }
 .player-card__photo {
   aspect-ratio: 4/5;
-  background: var(--navy);
+  background: var(--black);
   overflow: hidden;
 }
 .player-card__body {
@@ -737,21 +733,21 @@ a {
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--white);
 }
 .player-card__body h3 {
   font-family: var(--font-display);
   font-size: 1rem;
-  color: var(--navy);
+  color: var(--black);
   line-height: 1.25;
 }
 .player-card__country {
   font-size: 0.85rem;
-  color: var(--ink-soft);
+  color: var(--gray);
 }
 .players__footnote {
   text-align: center;
-  color: var(--ink-soft);
+  color: var(--gray);
   font-size: 0.8rem;
   margin-top: 36px;
   opacity: 0.75;
@@ -778,7 +774,7 @@ a {
   text-align: center;
   max-width: 540px;
   margin: 0 auto 56px;
-  color: var(--ink-soft);
+  color: var(--gray);
   font-size: 1.05rem;
 }
 .stores__grid {
@@ -791,12 +787,12 @@ a {
 .store-card {
   border-radius: 6px;
   overflow: hidden;
-  background: #fff;
+  background: var(--white);
   border: 1px solid var(--line);
 }
 .store-card__img {
   aspect-ratio: 4/3;
-  background: var(--teal-light);
+  background: var(--white-soft);
   overflow: hidden;
 }
 .store-card__img img {
@@ -810,11 +806,11 @@ a {
 .store-card__body h3 {
   font-family: var(--font-display);
   font-size: 1.05rem;
-  color: var(--navy);
+  color: var(--black);
   margin-bottom: 8px;
 }
 .store-card__body p {
-  color: var(--ink-soft);
+  color: var(--gray);
   font-size: 0.92rem;
   line-height: 1.5;
 }
@@ -827,7 +823,7 @@ a {
 
 /* ---------- group strength ---------- */
 .group {
-  background: linear-gradient(135deg, var(--navy-deep), var(--navy));
+  background: linear-gradient(135deg, var(--black-soft), var(--black));
   padding: 120px 24px;
 }
 .group__content {
@@ -842,7 +838,7 @@ a {
   margin: 20px auto 40px;
 }
 .group__text strong {
-  color: var(--teal);
+  color: var(--white);
 }
 .group__brands {
   display: flex;
@@ -870,7 +866,7 @@ a {
   margin-top: 56px;
 }
 .contact-card {
-  border: 2px solid var(--navy);
+  border: 2px solid var(--black);
   border-radius: 6px;
   padding: 32px 28px;
   display: flex;
@@ -881,7 +877,7 @@ a {
     transform 0.2s ease;
 }
 .contact-card:not(.contact-card--address):hover {
-  background: var(--navy);
+  background: var(--black);
   transform: translateY(-3px);
 }
 .contact-card:not(.contact-card--address):hover .contact-card__label,
@@ -893,16 +889,16 @@ a {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--coral);
+  color: var(--black);
 }
 .contact-card__value {
   font-family: var(--font-display);
   font-size: 1.25rem;
-  color: var(--navy);
+  color: var(--black);
   line-height: 1.4;
 }
 .contact-card--address {
-  background: var(--cream);
+  background: var(--white);
 }
 .contact-card--address .contact-card__value {
   font-family: var(--font-body);
@@ -918,7 +914,7 @@ a {
 
 /* ---------- shop page ---------- */
 .shop-header {
-  background: linear-gradient(165deg, var(--navy) 0%, var(--navy-deep) 100%);
+  background: linear-gradient(165deg, var(--black) 0%, var(--black-soft) 100%);
   padding: 160px 24px 48px;
 }
 .shop-header__inner {
@@ -936,14 +932,14 @@ a {
   font-size: 0.95rem;
 }
 .shop-header__note {
-  color: var(--teal);
+  color: var(--white);
   font-size: 0.85rem;
   margin-top: 10px;
   font-weight: 600;
 }
 
 .shop-filters {
-  background: var(--cream);
+  background: var(--white);
   border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
@@ -968,7 +964,7 @@ a {
   font-family: var(--font-body);
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--navy);
+  color: var(--black);
   background: transparent;
   border: 1.5px solid var(--line);
   border-radius: 100px;
@@ -980,18 +976,18 @@ a {
     color 0.15s ease;
 }
 .filter-chip:hover {
-  border-color: var(--navy);
+  border-color: var(--black);
 }
 .filter-chip--active {
-  background: var(--navy);
-  border-color: var(--navy);
+  background: var(--black);
+  border-color: var(--black);
   color: #fff;
 }
 .shop-filters__sort {
   font-family: var(--font-body);
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--navy);
+  color: var(--black);
   background: #fff;
   border: 1.5px solid var(--line);
   border-radius: 6px;
@@ -1011,21 +1007,21 @@ a {
   gap: 24px;
 }
 .shop-card {
-  background: #fff;
+  background: var(--white);
   border: 1px solid var(--line);
   border-radius: 6px;
   overflow: hidden;
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 .shop-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 28px rgba(11, 20, 85, 0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 .shop-card__img {
   aspect-ratio: 1/1;
-  background: var(--teal-light);
+  background: var(--white);
 }
 .shop-card__body {
   padding: 16px;
@@ -1034,23 +1030,23 @@ a {
   gap: 4px;
 }
 .shop-card__brand {
+  color: var(--gray);
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--teal);
 }
 .shop-card__name {
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 0.95rem;
-  color: var(--navy);
+  color: var(--black);
   line-height: 1.3;
   margin-bottom: 2px;
 }
 .shop-empty {
   text-align: center;
-  color: var(--ink-soft);
+  color: var(--gray);
   padding: 60px 24px;
   font-size: 1rem;
 }
@@ -1081,7 +1077,7 @@ a {
 
 /* ---------- footer ---------- */
 .footer {
-  background: var(--navy-deep);
+  background: var(--black-soft);
   padding: 40px 24px;
 }
 .footer__inner {
