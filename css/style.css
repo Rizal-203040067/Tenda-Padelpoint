@@ -522,6 +522,10 @@ a {
   transform: translateY(-4px);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
 }
+.product-card__link {
+  display: block;
+  color: inherit;
+}
 .product-card__img {
   aspect-ratio: 4/5;
   background: var(--white-soft);
