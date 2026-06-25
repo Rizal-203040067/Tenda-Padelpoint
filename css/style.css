@@ -520,7 +520,8 @@ a {
   background: #fff;
 }
 .product-card__icon {
-  font-size: 2rem;
+  width: 56px;
+  height: 56px;
   margin-bottom: 20px;
 }
 .product-card h3 {
@@ -819,38 +820,6 @@ a {
   .stores__grid {
     grid-template-columns: 1fr;
   }
-}
-
-/* ---------- group strength ---------- */
-.group {
-  background: linear-gradient(135deg, var(--black-soft), var(--black));
-  padding: 120px 24px;
-}
-.group__content {
-  max-width: 720px;
-  margin: 0 auto;
-  text-align: center;
-}
-.group__text {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin: 20px auto 40px;
-}
-.group__text strong {
-  color: var(--white);
-}
-.group__brands {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-.group__brands span {
-  color: rgba(255, 255, 255, 0.5);
-  font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
 }
 
 /* ---------- contact ---------- */
