@@ -1,7 +1,7 @@
 // ---------------------------------------------------------------
 // PRODUCT DATA (real catalogue)
 // ---------------------------------------------------------------
-// category must be one of: rackets | shoes | apparel | accessories
+// category must be one of: rackets | shoes | apparel | bags
 // image is a path under images/products/
 // No price field: this store sends buyers to the physical store or
 // WhatsApp to check current pricing, so price is intentionally
@@ -135,14 +135,14 @@ const PRODUCTS = [
     id: "p18",
     name: "BABOLAT RH PRO MULTICOLOR BY. JUAN LEBRON",
     brand: "Babolat",
-    category: "accessories",
+    category: "bags",
     image: "images/products/babolat-rh-pro-multicolor-by-juan-lebron.jpg",
   },
   {
     id: "p19",
     name: "BABOLAT RH PRO ORANGE PADEL BAG BY. JUAN LEBRON",
     brand: "Babolat",
-    category: "accessories",
+    category: "bags",
     image: "images/products/babolat-rh-pro-orange-padel-bag-by-juan-lebron.jpg",
   },
   {
@@ -156,14 +156,14 @@ const PRODUCTS = [
     id: "p21",
     name: "BULLPADEL CASUAL BLACK PADEL BAG",
     brand: "Bullpadel",
-    category: "accessories",
+    category: "bags",
     image: "images/products/bullpadel-casual-black-padel-bag.jpg",
   },
   {
     id: "p22",
     name: "BULLPADEL VERTEX 05 GEO BLACK PREMIER PADEL BAG 2026",
     brand: "Bullpadel",
-    category: "accessories",
+    category: "bags",
     image:
       "images/products/bullpadel-vertex-05-geo-black-premier-padel-bag-2026.jpg",
   },
@@ -171,7 +171,7 @@ const PRODUCTS = [
     id: "p23",
     name: "BULLPADEL VERTEX WOMAN PREMIER WHITE 2026 PADEL BAG",
     brand: "Bullpadel",
-    category: "accessories",
+    category: "bags",
     image:
       "images/products/bullpadel-vertex-woman-premier-white-2026-padel-bag.jpg",
   },
@@ -346,7 +346,7 @@ const CATEGORY_LABELS = {
   rackets: "Rackets",
   shoes: "Shoes",
   apparel: "Apparel",
-  accessories: "Accessories",
+  bags: "Bags",
 };
 
 function getCategoryFromURL() {
