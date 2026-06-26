@@ -779,7 +779,7 @@ a {
 .stores {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 80px 24px 120px;
+  padding: 80px 24px 80px;
 }
 .stores__sub {
   text-align: center;
@@ -836,6 +836,9 @@ a {
     padding: 80px 24px 40px;
   }
   .stores {
+    padding: 56px 24px 56px;
+  }
+  .contact {
     padding: 56px 24px 80px;
   }
 }
@@ -844,7 +847,7 @@ a {
 .contact {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 120px 24px;
+  padding: 80px 24px 120px;
 }
 .contact__grid {
   display: grid;
