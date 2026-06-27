@@ -70,12 +70,9 @@ a {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--black);
   margin-bottom: 14px;
   display: block;
-}
-.eyebrow--dark {
-  color: var(--black);
 }
 .eyebrow--center {
   text-align: center;
