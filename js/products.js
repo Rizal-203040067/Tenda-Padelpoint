@@ -92,7 +92,7 @@ const PRODUCTS = [
     id: "p12",
     name: "Adidas Arrow Hit Pro EDT 2026",
     brand: "Adidas",
-    category: "shoes",
+    category: "rackets",
     image: "images/products/adidas-arrow-hit-pro-edt-2026.jpg",
   },
   {
