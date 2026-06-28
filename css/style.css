@@ -489,11 +489,6 @@ a {
   gap: 24px;
   margin-top: 56px;
 }
-.products__cta {
-  display: flex;
-  justify-content: center;
-  margin-top: 48px;
-}
 .product-card {
   background: var(--white);
   border: 1px solid var(--line);
