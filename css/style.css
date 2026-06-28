@@ -780,6 +780,17 @@ a {
   overflow: hidden;
   background: var(--white);
   border: 1px solid var(--line);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.store-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+}
+.store-card__link {
+  display: block;
+  color: inherit;
 }
 .store-card__img {
   aspect-ratio: 4/3;
@@ -879,16 +890,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding: 10px 12px;
-  margin: 0 -12px;
-  border-radius: 4px;
-  transition: background 0.15s ease;
-}
-.contact-card__store:hover {
-  background: var(--white-soft);
-}
-.contact-card__store:hover .contact-card__store-name {
-  text-decoration: underline;
+  padding: 10px 0;
 }
 .contact-card__store-name {
   font-family: var(--font-display);
