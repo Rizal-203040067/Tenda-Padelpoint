@@ -18,7 +18,7 @@
   --line: rgba(0, 0, 0, 0.08);
 
   --accent: #c338c8;
-  --accent-gradient: linear-gradient(90deg, #c338c8 0%, #0bcdf1 100%);
+  --accent-gradient: linear-gradient(90deg, #0bcdf1 0%, #c338c8 100%);
 
   --font-display: "Archivo Black", sans-serif;
   --font-body: "Archivo", sans-serif;
