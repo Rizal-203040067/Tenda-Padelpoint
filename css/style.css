@@ -1,7 +1,7 @@
 /* =========================================================
    TIENDA PADELPOINT — DESIGN TOKENS
    Black #000000 · White #FFFFFF · Gray #6B7280
-   Coral #FF6B4A (accent — buttons, marquee, labels, focus ring)
+   Accent gradient #C338C8 → #0BCDF1 (buttons, marquee, labels, focus ring)
    Display: Archivo Black · Body: Archivo
    ========================================================= */
 
@@ -17,7 +17,8 @@
 
   --line: rgba(0, 0, 0, 0.08);
 
-  --coral: #ff6b4a;
+  --accent: #c338c8;
+  --accent-gradient: linear-gradient(90deg, #c338c8 0%, #0bcdf1 100%);
 
   --font-display: "Archivo Black", sans-serif;
   --font-body: "Archivo", sans-serif;
@@ -62,7 +63,7 @@ a {
 }
 
 :focus-visible {
-  outline: 3px solid var(--coral);
+  outline: 3px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -115,12 +116,12 @@ a {
   border: 2px solid transparent;
 }
 .btn--primary {
-  background: var(--coral);
+  background: var(--accent-gradient);
   color: #fff;
 }
 .btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(255, 107, 74, 0.35);
+  box-shadow: 0 10px 24px rgba(195, 56, 200, 0.35);
 }
 .btn--ghost {
   border-color: rgba(255, 255, 255, 0.45);
@@ -235,7 +236,7 @@ a {
   color: #ffffff;
 }
 .nav__cta {
-  background: var(--coral);
+  background: var(--accent-gradient);
   color: #fff;
   padding: 10px 20px;
   border-radius: 4px;
@@ -369,7 +370,7 @@ a {
 }
 /* ---------- marquee ---------- */
 .marquee {
-  background: var(--coral);
+  background: var(--accent-gradient);
   overflow: hidden;
   padding: 14px 0;
 }
@@ -452,7 +453,11 @@ a {
 .vm__tag {
   font-family: var(--font-display);
   font-size: 0.85rem;
-  color: var(--coral);
+  color: var(--accent);
+  background: var(--accent-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   display: block;
   margin-bottom: 12px;
   letter-spacing: 0.05em;
@@ -698,7 +703,7 @@ a {
   top: 12px;
   left: 12px;
   z-index: 2;
-  background: var(--coral);
+  background: var(--accent-gradient);
   color: #fff;
   font-family: var(--font-display);
   font-size: 0.95rem;
@@ -862,7 +867,11 @@ a {
   background: var(--black);
   transform: translateY(-3px);
 }
-.contact-card:not(.contact-card--multi):hover .contact-card__label,
+.contact-card:not(.contact-card--multi):hover .contact-card__label {
+  background: none;
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+}
 .contact-card:not(.contact-card--multi):hover .contact-card__value {
   color: #fff;
 }
@@ -871,7 +880,11 @@ a {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--coral);
+  color: var(--accent);
+  background: var(--accent-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .contact-card__value {
   font-family: var(--font-display);
