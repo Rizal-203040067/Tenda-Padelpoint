@@ -117,6 +117,7 @@ a {
 }
 .btn--primary {
   background: var(--accent-gradient);
+  background-clip: padding-box;
   color: #fff;
 }
 .btn--primary:hover {
