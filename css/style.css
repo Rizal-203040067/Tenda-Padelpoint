@@ -427,7 +427,7 @@ a {
   font-size: 1.05rem;
   line-height: 1.7;
   margin-top: 20px;
-  text-align: right;
+  text-align: justify;
 }
 
 @media (max-width: 860px) {
