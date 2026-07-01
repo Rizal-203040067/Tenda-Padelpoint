@@ -76,6 +76,13 @@
 
     <!-- ===== HERO ===== -->
     <section class="hero" id="top">
+      <!-- background slides -->
+      <div class="hero__slides" aria-hidden="true">
+        <div class="hero__slide hero__slide--1"></div>
+        <div class="hero__slide hero__slide--2"></div>
+      </div>
+      <!-- overlay so text stays readable over any photo -->
+      <div class="hero__overlay" aria-hidden="true"></div>
       <div class="hero__court" aria-hidden="true">
         <div class="court-line court-line--center"></div>
         <div class="court-line court-line--service"></div>
@@ -99,6 +106,11 @@
           >
           <a href="#stores" class="btn btn--ghost">Find a Store</a>
         </div>
+      </div>
+      <!-- slide dot indicators -->
+      <div class="hero__dots" aria-hidden="true">
+        <span class="hero__dot hero__dot--active"></span>
+        <span class="hero__dot"></span>
       </div>
     </section>
 
