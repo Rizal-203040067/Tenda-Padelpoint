@@ -488,7 +488,7 @@ a {
 .products {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 0 24px 120px;
+  padding: 0 24px 80px;
 }
 .products__grid {
   display: grid;
@@ -639,7 +639,7 @@ a {
 .players {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 120px 24px 40px;
+  padding: 120px 24px 60px;
 }
 .players__sub {
   text-align: center;
@@ -766,7 +766,7 @@ a {
 .stores {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 56px 24px 56px;
+  padding: 56px 24px 80px;
 }
 .stores__sub {
   text-align: center;
@@ -830,11 +830,14 @@ a {
   }
 }
 @media (max-width: 640px) {
-  .players {
-    padding: 80px 24px 24px;
+  .products {
+    padding: 0 24px 56px;
   }
   .stores {
-    padding: 40px 24px 40px;
+    padding: 40px 24px 56px;
+  }
+  .players {
+    padding: 80px 24px 40px;
   }
   .contact {
     padding: 40px 24px 80px;
