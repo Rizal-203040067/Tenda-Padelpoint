@@ -309,20 +309,83 @@ a {
 }
 
 /* ---------- hero ---------- */
+/* ---------- hero carousel ---------- */
 .hero {
   position: relative;
-  background: linear-gradient(180deg, #000000 0%, #111111 100%);
   min-height: 70vh;
   display: flex;
   align-items: center;
   padding: 140px 24px 100px;
   overflow: hidden;
 }
+.hero__slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+.hero__slide--active {
+  opacity: 1;
+}
+.hero__slide--1 {
+  background-image: url("images/hero-slide-1.jpg");
+}
+.hero__slide--2 {
+  background-image: url("images/hero-slide-2.jpg");
+}
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.35) 60%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+}
 .hero__court {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.5;
+  opacity: 0.15;
+  z-index: 2;
+}
+.hero__inner {
+  position: relative;
+  z-index: 3;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  width: 100%;
+  color: #fff;
+}
+.hero__dots {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+}
+.hero__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: background 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+.hero__dot--active {
+  background: #fff;
+  transform: scale(1.3);
 }
 .court-line {
   position: absolute;
@@ -340,13 +403,6 @@ a {
   right: 8%;
   top: 62%;
   height: 2px;
-}
-.hero__inner {
-  position: relative;
-  max-width: var(--maxw);
-  margin: 0 auto;
-  width: 100%;
-  color: #fff;
 }
 .hero__title {
   font-family: var(--font-display);
@@ -488,7 +544,7 @@ a {
 .products {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 0 24px 80px;
+  padding: 0 24px 48px;
 }
 .products__grid {
   display: grid;
@@ -766,7 +822,7 @@ a {
 .stores {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 56px 24px 80px;
+  padding: 32px 24px 80px;
 }
 .stores__sub {
   text-align: center;
@@ -831,10 +887,10 @@ a {
 }
 @media (max-width: 640px) {
   .products {
-    padding: 0 24px 56px;
+    padding: 0 24px 32px;
   }
   .stores {
-    padding: 40px 24px 56px;
+    padding: 24px 24px 56px;
   }
   .players {
     padding: 80px 24px 40px;
