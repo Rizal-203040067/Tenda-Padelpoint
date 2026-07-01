@@ -119,3 +119,35 @@ playerTabs.forEach((tab) => {
     });
   });
 });
+
+// Hero carousel
+(function () {
+  const slides = document.querySelectorAll(".hero__slide");
+  const dots = document.querySelectorAll(".hero__dot");
+  if (!slides.length) return;
+
+  let current = 0;
+
+  function goTo(index) {
+    slides[current].classList.remove("hero__slide--active");
+    dots[current].classList.remove("hero__dot--active");
+    current = index;
+    slides[current].classList.add("hero__slide--active");
+    dots[current].classList.add("hero__dot--active");
+  }
+
+  // Set first slide active on load
+  goTo(0);
+
+  // Auto-rotate every 5 seconds
+  let timer = setInterval(() => goTo((current + 1) % slides.length), 5000);
+
+  // Clicking dots manually navigates and resets the timer
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      clearInterval(timer);
+      goTo(i);
+      timer = setInterval(() => goTo((current + 1) % slides.length), 5000);
+    });
+  });
+})();
